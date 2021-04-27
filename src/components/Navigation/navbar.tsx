@@ -2,45 +2,58 @@ import React, { FC } from "react";
 import { Layout, Menu, Typography } from "antd";
 import { Link } from "react-scroll";
 
+const { useState } = React;
 const { Text } = Typography;
+const MenuOptions = [
+  {
+    link: "about",
+    text: "About Me",
+  },
+  {
+    link: "tech",
+    text: "Technical Skillsets",
+  },
+  {
+    link: "project",
+    text: "Projects",
+  },
+  {
+    link: "work",
+    text: "Work Experience",
+  },
+  {
+    link: "contact",
+    text: "Contact Me",
+  },
+];
 
 const Navbar: FC = () => {
+  const s = {
+    color: "black",
+    fontFamily: "Roboto Slab",
+    fontSize: "24px",
+  };
+
   return (
-    <div style={{ background: "orange" }}>
-      <ul
-        style={{
-          display: "flex",
-          listStyle: "none",
-          justifyContent: "space-around",
-        }}
-      >
-        <li>
-          <Link to="about" spy={true} smooth={true}>
-            <Text style={{ fontSize: "24px" }}>About</Text>
-          </Link>
-        </li>
-        <li>
-          <Link to="tech" spy={true} smooth={true}>
-            <Text style={{ fontSize: "24px" }}>Technical Skillsets</Text>
-          </Link>
-        </li>
-        <li>
-          <Link to="project" spy={true} smooth={true}>
-            <Text style={{ fontSize: "24px" }}>Projects</Text>
-          </Link>
-        </li>
-        <li>
-          <Link to="project" spy={true} smooth={true}>
-            <Text style={{ fontSize: "24px" }}>Work Experience</Text>
-          </Link>
-        </li>
-        <li>
-          <Link to="project" spy={true} smooth={true}>
-            <Text style={{ fontSize: "24px" }}>Contact Me</Text>
-          </Link>
-        </li>
-      </ul>
-    </div>
+    <ul
+      style={{
+        marginTop: "20px",
+        height: "40px",
+        display: "flex",
+        listStyle: "none",
+        justifyContent: "space-around",
+      }}
+    >
+      {MenuOptions.map((option) => {
+        return (
+          <li>
+            <Link to={option.link} spy={true} smooth={true}>
+              <Text style={s}>{option.text}</Text>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

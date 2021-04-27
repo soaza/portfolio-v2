@@ -38,3 +38,7 @@
 }
 
 @import "~antd/dist/antd.css";
+
+body {
+  background-color: white;
+}

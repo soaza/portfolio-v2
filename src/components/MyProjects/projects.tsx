@@ -9,25 +9,13 @@ const Project: React.FC = () => {
     <>
       <Title
         style={{
+          marginTop: "30px",
           fontFamily: "Roboto Slab",
           textAlign: "center",
         }}
       >
         My Projects
       </Title>
-      <Row>
-        <Col span={12}>
-          <img
-            style={{ marginLeft: "40px" }}
-            height="75%"
-            width="75%"
-            object-fit="contain"
-            src={ProfilePic}
-          ></img>
-        </Col>
-
-        <Col></Col>
-      </Row>
     </>
   );
 };
