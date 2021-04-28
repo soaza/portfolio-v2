@@ -5,31 +5,32 @@ import { Link } from "react-scroll";
 const { useState } = React;
 const { Text } = Typography;
 const MenuOptions = [
-  {
-    link: "about",
-    text: "About Me",
-  },
+  //
   {
     link: "tech",
     text: "Technical Skillsets",
+    isHovered: false,
   },
   {
     link: "project",
     text: "Projects",
+    isHovered: false,
   },
   {
     link: "work",
     text: "Work Experience",
+    isHovered: false,
   },
   {
     link: "contact",
     text: "Contact Me",
+    isHovered: false,
   },
 ];
+console.log(MenuOptions);
 
 const Navbar: FC = () => {
   const s = {
-    color: "black",
     fontFamily: "Roboto Slab",
     fontSize: "24px",
   };
@@ -44,11 +45,13 @@ const Navbar: FC = () => {
         justifyContent: "space-around",
       }}
     >
-      {MenuOptions.map((option) => {
+      {MenuOptions.map((option, i) => {
         return (
           <li>
             <Link to={option.link} spy={true} smooth={true}>
-              <Text style={s}>{option.text}</Text>
+              <Text key={i} style={s}>
+                {option.text}
+              </Text>
             </Link>
           </li>
         );

@@ -8,6 +8,7 @@ const Project: React.FC = () => {
   return (
     <>
       <Title
+        id="project"
         style={{
           marginTop: "30px",
           fontFamily: "Roboto Slab",
@@ -16,6 +17,7 @@ const Project: React.FC = () => {
       >
         My Projects
       </Title>
+      <div style={{ height: "800px" }}></div>
     </>
   );
 };
