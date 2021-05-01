@@ -8,7 +8,7 @@ import Navbar from "./components/Navigation/navbar";
 import AboutMe from "./components/AboutMe/aboutme";
 import Project from "./components/MyProjects/projects";
 import TechStack from "./components/TechStack/tech";
-import { Link as ScrollLink } from "react-scroll";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const { Title, Link } = Typography;
 const { useState } = React;
