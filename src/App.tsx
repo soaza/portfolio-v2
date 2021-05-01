@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./App.css";
-import { Typography, Col, Row } from "antd";
+import { Typography, Col, Row, Divider } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import Typewriter from "typewriter-effect";
 import FadeIn from "react-fade-in";
@@ -26,8 +26,13 @@ const App: FC = () => {
       {!showTypewriter && (
         <FadeIn>
           <Navbar />
+
           <AboutMe />
+          <Divider />
+
           <TechStack />
+          <Divider />
+
           <Project />
         </FadeIn>
       )}

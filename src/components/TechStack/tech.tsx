@@ -26,17 +26,19 @@ const frontendTools = [
   },
   { text: "HTML", icon: "devicon-html5-plain colored", percent: 80 },
   { text: "CSS", icon: "devicon-css3-plain colored", percent: 60 },
+  { text: "Bootstrap", icon: "devicon-bootstrap-plain colored", percent: 50 },
   { text: "GatsbyJS", icon: "devicon-gatsby-plain colored", percent: 50 },
+  { text: "Django", icon: "devicon-django-plain colored", percent: 50 },
 ];
 
 const backendTools = [
+  { text: "PostgreSQL", icon: "devicon-postgresql-plain colored", percent: 80 },
+  { text: "MySQL", icon: "devicon-mysql-plain colored", percent: 80 },
   {
     text: "Django",
     icon: "devicon-django-plain colored",
     percent: 70,
   },
-  { text: "PostgreSQL", icon: "devicon-postgresql-plain colored", percent: 80 },
-  { text: "MySQL", icon: "devicon-mysql-plain colored", percent: 80 },
   { text: "ExpressJS", icon: "devicon-express-original-wordmark", percent: 50 },
   {
     text: "NodeJS",
@@ -194,8 +196,6 @@ const TechStack: React.FC = () => {
             );
           })}
         </Row>
-
-        <div style={{ height: "400px" }}></div>
       </div>
     </>
   );
