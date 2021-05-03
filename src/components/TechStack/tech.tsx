@@ -53,6 +53,13 @@ const otherTools = [
   { text: "Git", icon: "devicon-git-plain colored", percent: 80 },
 ];
 
+const skillSets = [
+  { title: "Languages", arr: languages },
+  { title: "Front-end", arr: frontendTools },
+  { title: "Back-end", arr: backendTools },
+  { title: "Other Tools", arr: otherTools },
+];
+
 const { Text, Title } = Typography;
 const TechStack: React.FC = () => {
   return (
@@ -73,129 +80,49 @@ const TechStack: React.FC = () => {
           Technical Skillsets
         </Title>
 
-        <Title style={{ textAlign: "center" }} level={3}>
-          Languages
-        </Title>
+        {skillSets.map((skillsetArea) => {
+          return (
+            <>
+              <Title style={{ textAlign: "center" }} level={3}>
+                {skillsetArea.title}
+              </Title>
 
-        <Row justify="center">
-          {languages.map((language) => {
-            return (
-              <>
-                <Col style={{ fontSize: "60px", textAlign: "end" }} span={3}>
-                  <i
-                    style={{ marginRight: "10px" }}
-                    className={language.icon}
-                  ></i>
-                </Col>
+              <Row justify="center">
+                {skillsetArea.arr.map((skillset) => {
+                  return (
+                    <>
+                      <Col
+                        style={{ fontSize: "60px", textAlign: "end" }}
+                        span={3}
+                      >
+                        <i
+                          style={{ marginRight: "10px" }}
+                          className={skillset.icon}
+                        ></i>
+                      </Col>
 
-                <Col span={9}>
-                  <Row>
-                    <Text style={{ fontSize: "20px" }}>{language.text}</Text>
-                  </Row>
-                  <Progress
-                    style={{ width: "80%" }}
-                    percent={language.percent}
-                    showInfo={false}
-                    strokeColor="lightgreen"
-                  />
-                </Col>
-              </>
-            );
-          })}
-        </Row>
+                      <Col span={9}>
+                        <Row>
+                          <Text style={{ fontSize: "20px" }}>
+                            {skillset.text}
+                          </Text>
+                        </Row>
+                        <Progress
+                          style={{ width: "80%" }}
+                          percent={skillset.percent}
+                          showInfo={false}
+                          strokeColor="lightgreen"
+                        />
+                      </Col>
+                    </>
+                  );
+                })}
+              </Row>
+            </>
+          );
+        })}
 
-        <Row justify="center">
-          <Title level={3}>Front-end</Title>
-        </Row>
-
-        <Row justify="center">
-          {frontendTools.map((frontend) => {
-            return (
-              <>
-                <Col style={{ fontSize: "60px", textAlign: "end" }} span={3}>
-                  <i
-                    style={{ marginRight: "10px" }}
-                    className={frontend.icon}
-                  ></i>
-                </Col>
-
-                <Col span={9}>
-                  <Row>
-                    <Text style={{ fontSize: "20px" }}>{frontend.text}</Text>
-                  </Row>
-                  <Progress
-                    style={{ width: "80%" }}
-                    percent={frontend.percent}
-                    showInfo={false}
-                    strokeColor="lightgreen"
-                  />
-                </Col>
-              </>
-            );
-          })}
-        </Row>
-
-        <Row justify="center">
-          <Title level={3}>Back-end</Title>
-        </Row>
-
-        <Row justify="center">
-          {backendTools.map((backend) => {
-            return (
-              <>
-                <Col style={{ fontSize: "60px", textAlign: "end" }} span={3}>
-                  <i
-                    style={{ marginRight: "10px" }}
-                    className={backend.icon}
-                  ></i>
-                </Col>
-
-                <Col span={9}>
-                  <Row>
-                    <Text style={{ fontSize: "20px" }}>{backend.text}</Text>
-                  </Row>
-                  <Progress
-                    style={{ width: "80%" }}
-                    percent={backend.percent}
-                    showInfo={false}
-                    strokeColor="lightgreen"
-                  />
-                </Col>
-              </>
-            );
-          })}
-        </Row>
-
-        <Row justify="center">
-          <Title level={3}>Other Tools</Title>
-        </Row>
-
-        <Row justify="center">
-          {otherTools.map((othertool) => {
-            return (
-              <>
-                <Col style={{ fontSize: "60px", textAlign: "end" }} span={3}>
-                  <i
-                    style={{ marginRight: "10px" }}
-                    className={othertool.icon}
-                  ></i>
-                </Col>
-
-                <Col span={9}>
-                  <Row>
-                    <Text style={{ fontSize: "20px" }}>{othertool.text}</Text>
-                  </Row>
-                  <Progress
-                    style={{ width: "80%" }}
-                    percent={othertool.percent}
-                    showInfo={false}
-                    strokeColor="lightgreen"
-                  />
-                </Col>
-              </>
-            );
-          })}
-        </Row>
+        <div style={{ height: "400px" }}></div>
       </div>
     </>
   );
