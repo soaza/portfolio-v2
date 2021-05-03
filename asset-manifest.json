@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.3622cdd6.chunk.css",
-    "main.js": "/my-app/static/js/main.87c39228.chunk.js",
-    "main.js.map": "/my-app/static/js/main.87c39228.chunk.js.map",
-    "runtime-main.js": "/my-app/static/js/runtime-main.ba389c49.js",
-    "runtime-main.js.map": "/my-app/static/js/runtime-main.ba389c49.js.map",
-    "static/css/2.069de591.chunk.css": "/my-app/static/css/2.069de591.chunk.css",
-    "static/js/2.1d3471ac.chunk.js": "/my-app/static/js/2.1d3471ac.chunk.js",
-    "static/js/2.1d3471ac.chunk.js.map": "/my-app/static/js/2.1d3471ac.chunk.js.map",
-    "index.html": "/my-app/index.html",
-    "static/css/2.069de591.chunk.css.map": "/my-app/static/css/2.069de591.chunk.css.map",
-    "static/css/main.3622cdd6.chunk.css.map": "/my-app/static/css/main.3622cdd6.chunk.css.map",
-    "static/js/2.1d3471ac.chunk.js.LICENSE.txt": "/my-app/static/js/2.1d3471ac.chunk.js.LICENSE.txt",
-    "static/media/NTUC_Income_logo.c406b7f2.jpeg": "/my-app/static/media/NTUC_Income_logo.c406b7f2.jpeg",
-    "static/media/NUS_Logo.a55bd0b7.jpeg": "/my-app/static/media/NUS_Logo.a55bd0b7.jpeg",
-    "static/media/profile_pic_circle.16b59e3b.png": "/my-app/static/media/profile_pic_circle.16b59e3b.png",
-    "static/media/workclass-logo.785bc2c1.png": "/my-app/static/media/workclass-logo.785bc2c1.png"
+    "main.css": "/portfolio-v2/static/css/main.3622cdd6.chunk.css",
+    "main.js": "/portfolio-v2/static/js/main.6b71498d.chunk.js",
+    "main.js.map": "/portfolio-v2/static/js/main.6b71498d.chunk.js.map",
+    "runtime-main.js": "/portfolio-v2/static/js/runtime-main.070cff55.js",
+    "runtime-main.js.map": "/portfolio-v2/static/js/runtime-main.070cff55.js.map",
+    "static/css/2.069de591.chunk.css": "/portfolio-v2/static/css/2.069de591.chunk.css",
+    "static/js/2.4b39ca4e.chunk.js": "/portfolio-v2/static/js/2.4b39ca4e.chunk.js",
+    "static/js/2.4b39ca4e.chunk.js.map": "/portfolio-v2/static/js/2.4b39ca4e.chunk.js.map",
+    "index.html": "/portfolio-v2/index.html",
+    "static/css/2.069de591.chunk.css.map": "/portfolio-v2/static/css/2.069de591.chunk.css.map",
+    "static/css/main.3622cdd6.chunk.css.map": "/portfolio-v2/static/css/main.3622cdd6.chunk.css.map",
+    "static/js/2.4b39ca4e.chunk.js.LICENSE.txt": "/portfolio-v2/static/js/2.4b39ca4e.chunk.js.LICENSE.txt",
+    "static/media/NTUC_Income_logo.c406b7f2.jpeg": "/portfolio-v2/static/media/NTUC_Income_logo.c406b7f2.jpeg",
+    "static/media/NUS_Logo.a55bd0b7.jpeg": "/portfolio-v2/static/media/NUS_Logo.a55bd0b7.jpeg",
+    "static/media/profile_pic_circle.16b59e3b.png": "/portfolio-v2/static/media/profile_pic_circle.16b59e3b.png",
+    "static/media/workclass-logo.785bc2c1.png": "/portfolio-v2/static/media/workclass-logo.785bc2c1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ba389c49.js",
+    "static/js/runtime-main.070cff55.js",
     "static/css/2.069de591.chunk.css",
-    "static/js/2.1d3471ac.chunk.js",
+    "static/js/2.4b39ca4e.chunk.js",
     "static/css/main.3622cdd6.chunk.css",
-    "static/js/main.87c39228.chunk.js"
+    "static/js/main.6b71498d.chunk.js"
   ]
 }
