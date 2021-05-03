@@ -39,18 +39,22 @@ const AboutMe: React.FC = () => {
           ></img>
         </Row>
         <Row justify="center">
-          <Text
-            style={{
-              fontSize: "20px",
-              fontFamily: "Roboto Slab",
-              textAlign: "center",
-            }}
-          >
-            I am Kim Guan, a Year 2 Computer Science student,an aspiring
-            full-stack developer and also a self-proclaimed Disney movie junkie.
-          </Text>
+          <Col style={{ textAlign: "center" }} span={20}>
+            <Text
+              style={{
+                fontSize: "20px",
+                fontFamily: "Roboto Slab",
+                textAlign: "center",
+              }}
+            >
+              I am Kim Guan, a Year 2 Computer Science student at the National
+              University of Singapore,
+              <br />
+              an aspiring full-stack developer and also a self-proclaimed Disney
+              movie junkie.
+            </Text>
+          </Col>
         </Row>
-        {/* <div style={{ height: "400px" }}></div> */}
       </div>
     </>
   );

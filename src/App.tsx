@@ -9,6 +9,7 @@ import AboutMe from "./components/AboutMe/aboutme";
 import Project from "./components/MyProjects/projects";
 import TechStack from "./components/TechStack/tech";
 import ScrollAnimation from "react-animate-on-scroll";
+import WorkExperience from "./components/WorkExperience/workexp";
 
 const { Title, Link } = Typography;
 const { useState } = React;
@@ -34,6 +35,9 @@ const App: FC = () => {
           <Divider />
 
           <Project />
+          <Divider />
+
+          <WorkExperience />
         </FadeIn>
       )}
       {showTypewriter && (

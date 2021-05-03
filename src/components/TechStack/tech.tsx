@@ -121,8 +121,6 @@ const TechStack: React.FC = () => {
             </>
           );
         })}
-
-        <div style={{ height: "400px" }}></div>
       </div>
     </>
   );

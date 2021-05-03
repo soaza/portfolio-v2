@@ -1,8 +1,8 @@
 import * as react from "react";
-import { Typography, Row, Col } from "antd";
-import ProfilePic from "../../images/profile_pic.jpg";
+import { Typography, Row, Col, Timeline } from "antd";
+import NUSLogo from "../../images/NUS_Logo.jpeg";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const Project: React.FC = () => {
   return (
@@ -17,6 +17,7 @@ const Project: React.FC = () => {
       >
         My Projects
       </Title>
+
       <div style={{ height: "800px" }}></div>
     </>
   );
