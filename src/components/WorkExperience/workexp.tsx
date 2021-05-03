@@ -1,5 +1,5 @@
 import * as react from "react";
-import { Typography, Card, Timeline } from "antd";
+import { Typography, Card, Timeline, Tag, Row } from "antd";
 import NUSLogo from "../../images/NUS_Logo.jpeg";
 import NTUCLogo from "../../images/NTUC_Income_logo.jpeg";
 import WorkclassLogo from "../../images/workclass-logo.png";
@@ -235,12 +235,13 @@ const WorkExperience: React.FC = () => {
 
             <Text style={{ textAlign: "left" }}>
               <ul>
-                <li>
-                  <strong>
-                    Tech-stack:
-                    HTML/CSS,Typescript,React,Gatsby.JS,Cypress.JS,Django
-                  </strong>
-                </li>
+                <Row>
+                  <Tag color="blue">React</Tag>
+                  <Tag color="green">Django</Tag>
+                  <Tag color="purple">Gatsby.JS</Tag>
+                  <Tag color="orange">Cypress.JS</Tag>
+                </Row>
+
                 <li>
                   Responsible for writing code that is used in production by
                   over 60,000 users
