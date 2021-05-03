@@ -22,7 +22,7 @@ const badgeMapping = [
   { techstack: "React", color: "blue" },
 
   { techstack: "PostgresSQL", color: "green" },
-  { techstack: "Java", color: "yellow" },
+  { techstack: "Java", color: "pink" },
 ];
 
 const projects = [
@@ -79,6 +79,16 @@ const projects = [
             for the images.
           </Text>
         ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/pokeEncyclopedia",
+          },
+          {
+            title: "Website",
+            link: "https://soaza.github.io/pokeEncyclopedia/",
+          },
+        ],
       },
       {
         title: "Pawfriends",
@@ -92,6 +102,12 @@ const projects = [
             to customise the details of the website.
           </Text>
         ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/pawfriends",
+          },
+        ],
       },
       {
         title: "Portfolio",
@@ -100,6 +116,12 @@ const projects = [
         text: (
           <Text>Built from scratch using React and Ant.Design components.</Text>
         ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/portfolio-v2",
+          },
+        ],
       },
     ],
   },
@@ -125,6 +147,17 @@ const projects = [
             Engineering, with my role being the team leader.
           </Text>
         ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/AY2021S1-CS2103T-W11-1/tp",
+          },
+          {
+            title: "Video",
+            link:
+              "https://www.youtube.com/watch?v=DfCUDk3LgPU&feature=youtu.be",
+          },
+        ],
       },
     ],
   },
@@ -149,7 +182,7 @@ const Project: React.FC = () => {
           return (
             <TabPane tab={project.type} key={i}>
               <Row justify="space-around">
-                {project.data.map((project) => {
+                {project.data.map((project: any) => {
                   return (
                     <Col style={{ marginTop: "20px" }} span={11}>
                       <Card>
@@ -158,7 +191,7 @@ const Project: React.FC = () => {
                             fontSize: "30px",
                             fontFamily: "Roboto Slab",
                             textAlign: "center",
-                            marginBottom: "0px",
+                            marginBottom: "20px",
                           }}
                         >
                           {project.title}
@@ -166,7 +199,7 @@ const Project: React.FC = () => {
 
                         <Image.PreviewGroup>
                           <Carousel dotPosition="bottom" effect="fade" autoplay>
-                            {project.images?.map((image) => {
+                            {project.images?.map((image: any) => {
                               return (
                                 <>
                                   <Image height="400px" src={image}></Image>
@@ -178,7 +211,7 @@ const Project: React.FC = () => {
                         </Image.PreviewGroup>
 
                         <Row style={{ marginBottom: "20px" }}>
-                          {project.techstack?.map((tech) => {
+                          {project.techstack?.map((tech: any) => {
                             return (
                               <Tag
                                 color={
@@ -196,7 +229,7 @@ const Project: React.FC = () => {
                         <Text>{project.text}</Text>
 
                         <Row style={{ marginTop: "20px" }}>
-                          {project.links?.map((link) => {
+                          {project.links?.map((link: any) => {
                             return (
                               <Button
                                 shape="round"

@@ -49,3 +49,8 @@
   opacity: 1;
   background: #000000;
 }
+
+.ant-tabs-nav-list {
+  display: flex;
+  justify-content: center;
+}
