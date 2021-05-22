@@ -1,6 +1,6 @@
-import * as react from "react";
 import { Typography, Row, Col, Progress, Card } from "antd";
-import { createFromIconfontCN } from "@ant-design/icons";
+
+const Fade = require("react-reveal/Fade");
 
 const languages = [
   {
@@ -82,43 +82,45 @@ const TechStack: React.FC = () => {
 
         {skillSets.map((skillsetArea) => {
           return (
-            <>
-              <Title style={{ textAlign: "center" }} level={3}>
-                {skillsetArea.title}
-              </Title>
+            <Fade bottom>
+              <>
+                <Title style={{ textAlign: "center" }} level={3}>
+                  {skillsetArea.title}
+                </Title>
 
-              <Row justify="center">
-                {skillsetArea.arr.map((skillset) => {
-                  return (
-                    <>
-                      <Col
-                        style={{ fontSize: "60px", textAlign: "end" }}
-                        span={3}
-                      >
-                        <i
-                          style={{ marginRight: "10px" }}
-                          className={skillset.icon}
-                        ></i>
-                      </Col>
+                <Row justify="center">
+                  {skillsetArea.arr.map((skillset) => {
+                    return (
+                      <>
+                        <Col
+                          style={{ fontSize: "60px", textAlign: "end" }}
+                          span={3}
+                        >
+                          <i
+                            style={{ marginRight: "10px" }}
+                            className={skillset.icon}
+                          ></i>
+                        </Col>
 
-                      <Col span={9}>
-                        <Row>
-                          <Text style={{ fontSize: "20px" }}>
-                            {skillset.text}
-                          </Text>
-                        </Row>
-                        <Progress
-                          style={{ width: "80%" }}
-                          percent={skillset.percent}
-                          showInfo={false}
-                          strokeColor="lightgreen"
-                        />
-                      </Col>
-                    </>
-                  );
-                })}
-              </Row>
-            </>
+                        <Col span={9}>
+                          <Row>
+                            <Text style={{ fontSize: "20px" }}>
+                              {skillset.text}
+                            </Text>
+                          </Row>
+                          <Progress
+                            style={{ width: "80%" }}
+                            percent={skillset.percent}
+                            showInfo={false}
+                            strokeColor="lightgreen"
+                          />
+                        </Col>
+                      </>
+                    );
+                  })}
+                </Row>
+              </>
+            </Fade>
           );
         })}
       </div>

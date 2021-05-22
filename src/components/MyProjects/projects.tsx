@@ -10,7 +10,10 @@ import {
   Button,
 } from "antd";
 
+const Fade = require("react-reveal/Fade");
+
 const { Title, Text } = Typography;
+
 const { TabPane } = Tabs;
 const badgeMapping = [
   { techstack: "Typescript", color: "#f67e7d" },
@@ -154,8 +157,7 @@ const projects = [
           },
           {
             title: "Video",
-            link:
-              "https://www.youtube.com/watch?v=DfCUDk3LgPU&feature=youtu.be",
+            link: "https://www.youtube.com/watch?v=DfCUDk3LgPU&feature=youtu.be",
           },
         ],
       },
@@ -177,80 +179,88 @@ const Project: React.FC = () => {
         My Projects
       </Title>
 
-      <Tabs style={{ marginLeft: "20px" }} centered size="large" animated>
-        {projects.map((project, i) => {
-          return (
-            <TabPane tab={project.type} key={i}>
-              <Row justify="space-around">
-                {project.data.map((project: any) => {
-                  return (
-                    <Col style={{ marginTop: "20px" }} span={11}>
-                      <Card>
-                        <Title
-                          style={{
-                            fontSize: "30px",
-                            fontFamily: "Roboto Slab",
-                            textAlign: "center",
-                            marginBottom: "20px",
-                          }}
-                        >
-                          {project.title}
-                        </Title>
+      <Fade bottom>
+        <Tabs style={{ marginLeft: "20px" }} centered size="large" animated>
+          {projects.map((project, i) => {
+            return (
+              <TabPane tab={project.type} key={i}>
+                <Row justify="space-around">
+                  {project.data.map((project: any) => {
+                    return (
+                      <Col style={{ marginTop: "20px" }} span={11}>
+                        <Card>
+                          <Title
+                            style={{
+                              fontSize: "30px",
+                              fontFamily: "Roboto Slab",
+                              textAlign: "center",
+                              marginBottom: "20px",
+                            }}
+                          >
+                            {project.title}
+                          </Title>
 
-                        <Image.PreviewGroup>
-                          <Carousel dotPosition="bottom" effect="fade" autoplay>
-                            {project.images?.map((image: any) => {
+                          <Image.PreviewGroup>
+                            <Carousel
+                              dotPosition="bottom"
+                              effect="fade"
+                              autoplay
+                            >
+                              {project.images?.map((image: any) => {
+                                return (
+                                  <>
+                                    <Image height="400px" src={image}></Image>
+                                    <Card bordered={false}></Card>
+                                  </>
+                                );
+                              })}
+                            </Carousel>
+                          </Image.PreviewGroup>
+
+                          <Row style={{ marginBottom: "20px" }}>
+                            {project.techstack?.map((tech: any) => {
                               return (
-                                <>
-                                  <Image height="400px" src={image}></Image>
-                                  <Card bordered={false}></Card>
-                                </>
+                                <Tag
+                                  color={
+                                    badgeMapping.find(
+                                      (mapping) => mapping.techstack == tech
+                                    )?.color
+                                  }
+                                >
+                                  {tech}
+                                </Tag>
                               );
                             })}
-                          </Carousel>
-                        </Image.PreviewGroup>
+                          </Row>
 
-                        <Row style={{ marginBottom: "20px" }}>
-                          {project.techstack?.map((tech: any) => {
-                            return (
-                              <Tag
-                                color={
-                                  badgeMapping.find(
-                                    (mapping) => mapping.techstack == tech
-                                  )?.color
-                                }
-                              >
-                                {tech}
-                              </Tag>
-                            );
-                          })}
-                        </Row>
+                          <Text>{project.text}</Text>
 
-                        <Text>{project.text}</Text>
-
-                        <Row style={{ marginTop: "20px" }}>
-                          {project.links?.map((link: any) => {
-                            return (
-                              <Button
-                                shape="round"
-                                style={{ marginRight: "10px" }}
-                                type="primary"
-                                onClick={() => window.open(link.link, "_blank")}
-                              >
-                                {link.title}
-                              </Button>
-                            );
-                          })}
-                        </Row>
-                      </Card>
-                    </Col>
-                  );
-                })}
-              </Row>
-            </TabPane>
-          );
-        })}
-      </Tabs>
+                          <Row style={{ marginTop: "20px" }}>
+                            {project.links?.map((link: any) => {
+                              return (
+                                <Button
+                                  shape="round"
+                                  style={{ marginRight: "10px" }}
+                                  type="primary"
+                                  onClick={() =>
+                                    window.open(link.link, "_blank")
+                                  }
+                                >
+                                  {link.title}
+                                </Button>
+                              );
+                            })}
+                          </Row>
+                        </Card>
+                      </Col>
+                    );
+                  })}
+                </Row>
+              </TabPane>
+            );
+          })}
+        </Tabs>
+      </Fade>
     </>
   );
 };

@@ -8,7 +8,6 @@ import Navbar from "./components/Navigation/navbar";
 import AboutMe from "./components/AboutMe/aboutme";
 import Project from "./components/MyProjects/projects";
 import TechStack from "./components/TechStack/tech";
-import ScrollAnimation from "react-animate-on-scroll";
 import WorkExperience from "./components/WorkExperience/workexp";
 import Contact from "./components/Contact/contact";
 
@@ -26,7 +25,7 @@ const App: FC = () => {
       />
 
       {!showTypewriter && (
-        <FadeIn>
+        <>
           <Navbar />
 
           <AboutMe />
@@ -42,7 +41,7 @@ const App: FC = () => {
           <Divider />
 
           <Contact />
-        </FadeIn>
+        </>
       )}
       {showTypewriter && (
         <>
