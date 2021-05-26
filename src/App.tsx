@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./App.css";
-import { Typography, Col, Row, Divider } from "antd";
+import { Typography, Col, Row, Divider, Affix, Button } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import Typewriter from "typewriter-effect";
 import FadeIn from "react-fade-in";
@@ -27,7 +27,21 @@ const App: FC = () => {
       {!showTypewriter && (
         <>
           <Navbar />
-
+          <Affix
+            style={{ zIndex: 1, position: "fixed", bottom: 10, right: 10 }}
+          >
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1Fa4y4XWmEpiShGvbKRrILas794_IqBfp/view"
+                )
+              }
+              style={{ borderRadius: 10 }}
+              type="primary"
+            >
+              My Resume
+            </Button>
+          </Affix>
           <AboutMe />
           <Divider />
 
