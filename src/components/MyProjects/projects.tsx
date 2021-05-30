@@ -8,6 +8,7 @@ import {
   Tag,
   Image,
   Button,
+  Grid,
 } from "antd";
 
 const Fade = require("react-reveal/Fade");
@@ -166,6 +167,8 @@ const projects = [
 ];
 
 const Project: React.FC = () => {
+  const bp = Grid.useBreakpoint();
+  const isWeb = bp.lg;
   return (
     <>
       <Title
@@ -187,7 +190,7 @@ const Project: React.FC = () => {
                 <Row justify="space-around">
                   {project.data.map((project: any) => {
                     return (
-                      <Col style={{ marginTop: "20px" }} span={11}>
+                      <Col style={{ marginTop: "20px" }} span={22} lg={11}>
                         <Card>
                           <Title
                             style={{

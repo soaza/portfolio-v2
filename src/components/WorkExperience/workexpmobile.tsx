@@ -8,7 +8,7 @@ const Fade = require("react-reveal/Fade");
 
 const { Title, Text } = Typography;
 
-const WorkExperience: React.FC = () => {
+const WorkExperienceMobile: React.FC = () => {
   const bp = Grid.useBreakpoint();
   const isWeb = bp.lg;
 
@@ -26,22 +26,8 @@ const WorkExperience: React.FC = () => {
       </Title>
 
       <Fade bottom>
-        <Timeline mode="alternate" reverse>
-          <Timeline.Item
-            label={
-              <Title
-                style={{
-                  fontSize: "18px",
-                  fontFamily: "Helvetica",
-                  textAlign: "left",
-                  marginBottom: "0px",
-                }}
-                level={3}
-              >
-                August 2019
-              </Title>
-            }
-          >
+        <Timeline reverse>
+          <Timeline.Item>
             <Card style={{ marginRight: "20px" }}>
               <Title
                 style={{
@@ -94,21 +80,7 @@ const WorkExperience: React.FC = () => {
             </Card>
           </Timeline.Item>
 
-          <Timeline.Item
-            label={
-              <Title
-                style={{
-                  fontSize: "18px",
-                  fontFamily: "Helvetica",
-                  textAlign: "right",
-                  marginBottom: "0px",
-                }}
-                level={3}
-              >
-                May 2020 - Aug 2020
-              </Title>
-            }
-          >
+          <Timeline.Item>
             <Card style={{ marginLeft: "20px" }}>
               <Title
                 style={{
@@ -148,21 +120,7 @@ const WorkExperience: React.FC = () => {
             </Card>
           </Timeline.Item>
 
-          <Timeline.Item
-            label={
-              <Title
-                style={{
-                  fontSize: "18px",
-                  fontFamily: "Helvetica",
-                  textAlign: "left",
-                  marginBottom: "0px",
-                }}
-                level={3}
-              >
-                Aug 2020 - May 2021
-              </Title>
-            }
-          >
+          <Timeline.Item>
             <Card style={{ marginRight: "20px" }}>
               <div style={{ textAlign: "center" }}>
                 <Title
@@ -201,21 +159,7 @@ const WorkExperience: React.FC = () => {
             </Card>
           </Timeline.Item>
 
-          <Timeline.Item
-            label={
-              <Title
-                style={{
-                  fontSize: "18px",
-                  fontFamily: "Helvetica",
-                  textAlign: "right",
-                  marginBottom: "0px",
-                }}
-                level={3}
-              >
-                Feb 2021 - Present
-              </Title>
-            }
-          >
+          <Timeline.Item>
             <Card style={{ marginRight: "20px" }}>
               <Title
                 style={{
@@ -270,4 +214,4 @@ const WorkExperience: React.FC = () => {
   );
 };
 
-export default WorkExperience;
+export default WorkExperienceMobile;

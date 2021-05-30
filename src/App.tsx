@@ -1,21 +1,23 @@
 import React, { FC } from "react";
 import "./App.css";
-import { Typography, Col, Row, Divider, Affix, Button } from "antd";
+import { Typography, Col, Row, Divider, Affix, Button, Grid } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import Typewriter from "typewriter-effect";
-import FadeIn from "react-fade-in";
 import Navbar from "./components/Navigation/navbar";
 import AboutMe from "./components/AboutMe/aboutme";
 import Project from "./components/MyProjects/projects";
 import TechStack from "./components/TechStack/tech";
 import WorkExperience from "./components/WorkExperience/workexp";
 import Contact from "./components/Contact/contact";
+import WorkExperienceMobile from "./components/WorkExperience/workexpmobile";
 
 const { Title, Link } = Typography;
 const { useState } = React;
 
 const App: FC = () => {
-  const [showTypewriter, setShowTypewriter] = useState(true);
+  const bp = Grid.useBreakpoint();
+  const isWeb = bp.lg;
+  const [showTypewriter, setShowTypewriter] = useState(isWeb ? true : false);
   const [textColor, setTextColor] = useState("black");
   return (
     <html>
@@ -26,7 +28,7 @@ const App: FC = () => {
 
       {!showTypewriter && (
         <>
-          <Navbar />
+          {isWeb && <Navbar />}
           <Affix
             style={{ zIndex: 1, position: "fixed", bottom: 10, right: 10 }}
           >
@@ -51,13 +53,13 @@ const App: FC = () => {
           <Project />
           <Divider />
 
-          <WorkExperience />
+          {isWeb ? <WorkExperience /> : <WorkExperienceMobile />}
           <Divider />
 
           <Contact />
         </>
       )}
-      {showTypewriter && (
+      {showTypewriter && isWeb && (
         <>
           <Row justify="center">
             <Col span={20}>

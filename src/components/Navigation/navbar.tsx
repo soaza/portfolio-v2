@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Layout, Menu, Typography } from "antd";
 import { Link } from "react-scroll";
 
-const { useState } = React;
 const { Text } = Typography;
 const MenuOptions = [
   //
@@ -27,7 +26,6 @@ const MenuOptions = [
     isHovered: false,
   },
 ];
-console.log(MenuOptions);
 
 const Navbar: FC = () => {
   const s = {

@@ -1,4 +1,4 @@
-import { Typography, Row, Col, Progress, Card } from "antd";
+import { Typography, Row, Col, Progress, Card, Grid } from "antd";
 
 const Fade = require("react-reveal/Fade");
 
@@ -62,6 +62,8 @@ const skillSets = [
 
 const { Text, Title } = Typography;
 const TechStack: React.FC = () => {
+  const bp = Grid.useBreakpoint();
+  const isWeb = bp.lg;
   return (
     <>
       <link
@@ -94,7 +96,8 @@ const TechStack: React.FC = () => {
                       <>
                         <Col
                           style={{ fontSize: "60px", textAlign: "end" }}
-                          span={3}
+                          span={6}
+                          lg={3}
                         >
                           <i
                             style={{ marginRight: "10px" }}
@@ -102,7 +105,7 @@ const TechStack: React.FC = () => {
                           ></i>
                         </Col>
 
-                        <Col span={9}>
+                        <Col span={18} lg={9}>
                           <Row>
                             <Text style={{ fontSize: "20px" }}>
                               {skillset.text}
