@@ -191,7 +191,7 @@ const Project: React.FC = () => {
                   {project.data.map((project: any) => {
                     return (
                       <Col style={{ marginTop: "20px" }} span={22} lg={11}>
-                        <Card>
+                        <Card style={{ minHeight: "750px" }}>
                           <Title
                             style={{
                               fontSize: "30px",

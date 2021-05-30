@@ -17,7 +17,7 @@ const { useState } = React;
 const App: FC = () => {
   const bp = Grid.useBreakpoint();
   const isWeb = bp.lg;
-  const [showTypewriter, setShowTypewriter] = useState(isWeb ? true : false);
+  const [showTypewriter, setShowTypewriter] = useState(true);
   const [textColor, setTextColor] = useState("black");
   return (
     <html>
@@ -26,7 +26,7 @@ const App: FC = () => {
         rel="stylesheet"
       />
 
-      {!showTypewriter && (
+      {(!showTypewriter || !isWeb) && (
         <>
           {isWeb && <Navbar />}
           <Affix
@@ -59,7 +59,7 @@ const App: FC = () => {
           <Contact />
         </>
       )}
-      {showTypewriter && isWeb && (
+      {isWeb && showTypewriter && (
         <>
           <Row justify="center">
             <Col span={20}>
