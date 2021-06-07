@@ -42,7 +42,7 @@ const WorkExperience: React.FC = () => {
               </Title>
             }
           >
-            <Card style={{ marginRight: "20px" }}>
+            <Card hoverable style={{ marginRight: "20px" }}>
               <Title
                 style={{
                   fontSize: "18px",
@@ -109,7 +109,7 @@ const WorkExperience: React.FC = () => {
               </Title>
             }
           >
-            <Card style={{ marginLeft: "20px" }}>
+            <Card hoverable style={{ marginLeft: "20px" }}>
               <Title
                 style={{
                   fontSize: "18px",
@@ -163,7 +163,7 @@ const WorkExperience: React.FC = () => {
               </Title>
             }
           >
-            <Card style={{ marginRight: "20px" }}>
+            <Card hoverable style={{ marginRight: "20px" }}>
               <div style={{ textAlign: "center" }}>
                 <Title
                   style={{
@@ -216,7 +216,12 @@ const WorkExperience: React.FC = () => {
               </Title>
             }
           >
-            <Card style={{ marginRight: "20px" }}>
+            <Card
+              hoverable
+              style={{
+                marginRight: "20px",
+              }}
+            >
               <Title
                 style={{
                   fontSize: "18px",
@@ -243,22 +248,27 @@ const WorkExperience: React.FC = () => {
                 <ul>
                   <Row>
                     <Tag color="blue">React</Tag>
-                    <Tag color="green">Django</Tag>
                     <Tag color="purple">Gatsby.JS</Tag>
+                    <Tag color="red">GraphQL</Tag>
                     <Tag color="orange">Cypress.JS</Tag>
+                    <Tag color="green">Django</Tag>
+                    <Tag color="pink">MySQL</Tag>
                   </Row>
 
                   <li>
-                    Responsible for writing code that is used in production by
-                    over 60,000 users
+                    Maintained and improved upon the front-end and back-end
+                    features of 5 core web applications used by the company on a
+                    daily basis which is used in production by over 60,000
+                    users.
                   </li>
                   <li>
-                    Took ownership of own projects and maintained code by
-                    writing own testcases using Cypress.JS
+                    Wrote a location matcher algorithm which allows users to
+                    location jobs that is located near the vicinity of their
+                    desired location,used daily by over 10,000 users.
                   </li>
                   <li>
-                    Wrote RESTful APIs to support front-end features on a
-                    regular basis.
+                    Built company’s Learning Hub which is utilised by over
+                    10,000 users.
                   </li>
                 </ul>
               </Text>

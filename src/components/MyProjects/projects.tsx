@@ -23,16 +23,102 @@ const badgeMapping = [
 
   { techstack: "NodeJS", color: "orange" },
 
-  { techstack: "React", color: "blue" },
-
   { techstack: "PostgresSQL", color: "green" },
   { techstack: "Java", color: "pink" },
+  { techstack: "AWS S3", color: "indigo" },
 ];
 
 const projects = [
   {
     type: "Web Development",
     data: [
+      {
+        title: "NUS Pawfriends Official Website",
+        techstack: [
+          "React",
+          "Typescript",
+          "AWS S3",
+          "ExpressJS",
+          "NodeJS",
+          "PostgresSQL",
+        ],
+        images: [process.env.PUBLIC_URL + "/projectImages/Pawfriends-1.png"],
+        text: (
+          <Text>
+            Pawfriends is a website built for NUS Pawfriends as the official new
+            website.
+            <br />
+            Utilised Ant Design UI as the main UI framework, with images hosted
+            on Amazon S3, with ExpressJS and NodeJS as the back-end and
+            PostgresSQL to store data.
+          </Text>
+        ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/pawfriends",
+          },
+        ],
+      },
+      {
+        title: "NUS Pawfriends Content Management System",
+        techstack: [
+          "React",
+          "Typescript",
+          "AWS S3",
+          "ExpressJS",
+          "NodeJS",
+          "PostgresSQL",
+        ],
+        images: [
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-cms-2.png",
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-cms-1.png",
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-cms-3.png",
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-cms-4.png",
+        ],
+        text: (
+          <Text>
+            Content Management System/Dashboard for the Pawfriends committee
+            members to make changes to the official website without needing to
+            code. <br />
+            Utilised Ant Design UI as the main UI framework, with images hosted
+            on Amazon S3, with ExpressJS and NodeJS as the back-end and
+            PostgresSQL to store data.
+            <br />
+            Main features include:
+            <ul>
+              <li>
+                Account Management System with basic user login authentication
+              </li>
+              <li>
+                Editing features for each individual page and allowing the users
+                to make new blogs posts on the website
+              </li>
+              <li> Image uploading to Amazon S3</li>
+            </ul>
+          </Text>
+        ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/pawfriends-cms",
+          },
+        ],
+      },
+      {
+        title: "Portfolio",
+        techstack: ["React", "Typescript"],
+        images: [process.env.PUBLIC_URL + "/projectImages/Portfolio-1.png"],
+        text: (
+          <Text>Built from scratch using React and Ant.Design components.</Text>
+        ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/portfolio-v2",
+          },
+        ],
+      },
       {
         title: "Smart Brain",
         techstack: ["React", "PostgresSQL", "ExpressJS", "NodeJS"],
@@ -91,39 +177,6 @@ const projects = [
           {
             title: "Website",
             link: "https://soaza.github.io/pokeEncyclopedia/",
-          },
-        ],
-      },
-      {
-        title: "Pawfriends",
-        techstack: ["React", "Typescript"],
-        images: [process.env.PUBLIC_URL + "/projectImages/Pawfriends-1.png"],
-        text: (
-          <Text>
-            Pawfriends is a website built for NUS Pawfriends as the official new
-            website.
-            <br />A dashboard is planned in the future for members of the club
-            to customise the details of the website.
-          </Text>
-        ),
-        links: [
-          {
-            title: "Source Code",
-            link: "https://github.com/soaza/pawfriends",
-          },
-        ],
-      },
-      {
-        title: "Portfolio",
-        techstack: ["React", "Typescript"],
-        images: [process.env.PUBLIC_URL + "/projectImages/Portfolio-1.png"],
-        text: (
-          <Text>Built from scratch using React and Ant.Design components.</Text>
-        ),
-        links: [
-          {
-            title: "Source Code",
-            link: "https://github.com/soaza/portfolio-v2",
           },
         ],
       },
@@ -191,7 +244,7 @@ const Project: React.FC = () => {
                   {project.data.map((project: any) => {
                     return (
                       <Col style={{ marginTop: "20px" }} span={22} lg={11}>
-                        <Card style={{ minHeight: "750px" }}>
+                        <Card hoverable style={{ minHeight: "800px" }}>
                           <Title
                             style={{
                               fontSize: "30px",
@@ -236,7 +289,7 @@ const Project: React.FC = () => {
                             })}
                           </Row>
 
-                          <Text>{project.text}</Text>
+                          <Text style={{ fontSize: 16 }}>{project.text}</Text>
 
                           <Row style={{ marginTop: "20px" }}>
                             {project.links?.map((link: any) => {
