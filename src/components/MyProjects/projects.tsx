@@ -42,7 +42,12 @@ const projects = [
           "NodeJS",
           "PostgresSQL",
         ],
-        images: [process.env.PUBLIC_URL + "/projectImages/Pawfriends-1.png"],
+        images: [
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-2.png",
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-3.png",
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-4.png",
+          process.env.PUBLIC_URL + "/projectImages/Pawfriends-5.png",
+        ],
         text: (
           <Text>
             Pawfriends is a website built for NUS Pawfriends as the official new
