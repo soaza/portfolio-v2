@@ -240,88 +240,80 @@ const Project: React.FC = () => {
         My Projects
       </Title>
 
-      <Fade bottom>
-        <Tabs style={{ marginLeft: "20px" }} centered size="large" animated>
-          {projects.map((project, i) => {
-            return (
-              <TabPane tab={project.type} key={i}>
-                <Row justify="space-around">
-                  {project.data.map((project: any) => {
-                    return (
-                      <Col style={{ marginTop: "20px" }} span={22} lg={11}>
-                        <Card hoverable style={{ minHeight: "800px" }}>
-                          <Title
-                            style={{
-                              fontSize: "30px",
-                              fontFamily: "Roboto Slab",
-                              textAlign: "center",
-                              marginBottom: "20px",
-                            }}
-                          >
-                            {project.title}
-                          </Title>
+      <Tabs style={{ marginLeft: "20px" }} centered size="large" animated>
+        {projects.map((project, i) => {
+          return (
+            <TabPane tab={project.type} key={i}>
+              <Row justify="space-around">
+                {project.data.map((project: any) => {
+                  return (
+                    <Col style={{ marginTop: "20px" }} span={22} lg={11}>
+                      <Card hoverable style={{ minHeight: "800px" }}>
+                        <Title
+                          style={{
+                            fontSize: "30px",
+                            fontFamily: "Roboto Slab",
+                            textAlign: "center",
+                            marginBottom: "20px",
+                          }}
+                        >
+                          {project.title}
+                        </Title>
 
-                          <Image.PreviewGroup>
-                            <Carousel
-                              dotPosition="bottom"
-                              effect="fade"
-                              autoplay
-                            >
-                              {project.images?.map((image: any) => {
-                                return (
-                                  <>
-                                    <Image height="400px" src={image}></Image>
-                                    <Card bordered={false}></Card>
-                                  </>
-                                );
-                              })}
-                            </Carousel>
-                          </Image.PreviewGroup>
-
-                          <Row style={{ marginBottom: "20px" }}>
-                            {project.techstack?.map((tech: any) => {
+                        <Image.PreviewGroup>
+                          <Carousel dotPosition="bottom" effect="fade" autoplay>
+                            {project.images?.map((image: any) => {
                               return (
-                                <Tag
-                                  color={
-                                    badgeMapping.find(
-                                      (mapping) => mapping.techstack == tech
-                                    )?.color
-                                  }
-                                >
-                                  {tech}
-                                </Tag>
+                                <>
+                                  <Image height="400px" src={image}></Image>
+                                  <Card bordered={false}></Card>
+                                </>
                               );
                             })}
-                          </Row>
+                          </Carousel>
+                        </Image.PreviewGroup>
 
-                          <Text style={{ fontSize: 16 }}>{project.text}</Text>
+                        <Row style={{ marginBottom: "20px" }}>
+                          {project.techstack?.map((tech: any) => {
+                            return (
+                              <Tag
+                                color={
+                                  badgeMapping.find(
+                                    (mapping) => mapping.techstack == tech
+                                  )?.color
+                                }
+                              >
+                                {tech}
+                              </Tag>
+                            );
+                          })}
+                        </Row>
 
-                          <Row style={{ marginTop: "20px" }}>
-                            {project.links?.map((link: any) => {
-                              return (
-                                <Button
-                                  shape="round"
-                                  style={{ marginRight: "10px" }}
-                                  type="primary"
-                                  onClick={() =>
-                                    window.open(link.link, "_blank")
-                                  }
-                                >
-                                  {link.title}
-                                </Button>
-                              );
-                            })}
-                          </Row>
-                        </Card>
-                      </Col>
-                    );
-                  })}
-                </Row>
-              </TabPane>
-            );
-          })}
-        </Tabs>
-      </Fade>
+                        <Text style={{ fontSize: 16 }}>{project.text}</Text>
+
+                        <Row style={{ marginTop: "20px" }}>
+                          {project.links?.map((link: any) => {
+                            return (
+                              <Button
+                                shape="round"
+                                style={{ marginRight: "10px" }}
+                                type="primary"
+                                onClick={() => window.open(link.link, "_blank")}
+                              >
+                                {link.title}
+                              </Button>
+                            );
+                          })}
+                        </Row>
+                      </Card>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </TabPane>
+          );
+        })}
+      </Tabs>
     </>
   );
 };

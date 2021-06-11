@@ -10,6 +10,7 @@ import TechStack from "./components/TechStack/tech";
 import WorkExperience from "./components/WorkExperience/workexp";
 import Contact from "./components/Contact/contact";
 import WorkExperienceMobile from "./components/WorkExperience/workexpmobile";
+import FadeIn from "react-fade-in";
 
 const { Title, Link } = Typography;
 const { useState } = React;
@@ -17,6 +18,7 @@ const { useState } = React;
 const App: FC = () => {
   const bp = Grid.useBreakpoint();
   const isWeb = bp.lg;
+  console.log(isWeb);
   const [showTypewriter, setShowTypewriter] = useState(true);
   const [textColor, setTextColor] = useState("black");
   return (
@@ -50,7 +52,13 @@ const App: FC = () => {
           <TechStack />
           <Divider />
 
-          <Project />
+          {isWeb && (
+            <FadeIn>
+              <Project />
+            </FadeIn>
+          )}
+
+          {!isWeb && <Project />}
           <Divider />
 
           {isWeb ? <WorkExperience /> : <WorkExperienceMobile />}
