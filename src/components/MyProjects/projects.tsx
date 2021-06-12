@@ -63,6 +63,10 @@ const projects = [
             title: "Source Code",
             link: "https://github.com/soaza/pawfriends",
           },
+          {
+            title: "Website",
+            link: "https://soaza.github.io/Pawfriends/",
+          },
         ],
       },
       {
