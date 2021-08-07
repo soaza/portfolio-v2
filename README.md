@@ -2,4 +2,4 @@
 
 Second rendition of my portfolio.
 
-Deployed at: <a>kimguanified.me</a>
+Deployed at: <a href="kimguanified.me">kimguanified.me</a>
