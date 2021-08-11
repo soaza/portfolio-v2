@@ -210,21 +210,7 @@ const WorkExperienceMobile: React.FC = () => {
             </Card>
           </Timeline.Item>
 
-          <Timeline.Item
-            label={
-              <Title
-                style={{
-                  fontSize: "18px",
-                  fontFamily: "Helvetica",
-                  textAlign: "right",
-                  marginBottom: "0px",
-                }}
-                level={3}
-              >
-                Aug 2021 - Present
-              </Title>
-            }
-          >
+          <Timeline.Item>
             <Card
               hoverable
               style={{
