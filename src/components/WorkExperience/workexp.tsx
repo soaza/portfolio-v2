@@ -3,15 +3,13 @@ import { Typography, Card, Timeline, Tag, Row, Grid } from "antd";
 import NUSLogo from "../../images/NUS_Logo.jpeg";
 import NTUCLogo from "../../images/NTUC_Income_logo.jpeg";
 import WorkclassLogo from "../../images/workclass-logo.png";
+import ShopeeLogo from "../../images/shopee-logo.png";
 
 const Fade = require("react-reveal/Fade");
 
 const { Title, Text } = Typography;
 
 const WorkExperience: React.FC = () => {
-  const bp = Grid.useBreakpoint();
-  const isWeb = bp.lg;
-
   return (
     <>
       <Title
@@ -33,7 +31,7 @@ const WorkExperience: React.FC = () => {
                 style={{
                   fontSize: "18px",
                   fontFamily: "Helvetica",
-                  textAlign: "left",
+                  textAlign: "right",
                   marginBottom: "0px",
                 }}
                 level={3}
@@ -100,7 +98,7 @@ const WorkExperience: React.FC = () => {
                 style={{
                   fontSize: "18px",
                   fontFamily: "Helvetica",
-                  textAlign: "right",
+                  textAlign: "left",
                   marginBottom: "0px",
                 }}
                 level={3}
@@ -119,7 +117,7 @@ const WorkExperience: React.FC = () => {
                 }}
                 level={3}
               >
-                Summer Software Engineer Intern at NTUC Income
+                Back-End Software Engineer Intern at NTUC Income
               </Title>
               <div style={{ textAlign: "center" }}>
                 <img width="50%" src={NTUCLogo}></img>
@@ -154,7 +152,7 @@ const WorkExperience: React.FC = () => {
                 style={{
                   fontSize: "18px",
                   fontFamily: "Helvetica",
-                  textAlign: "left",
+                  textAlign: "right",
                   marginBottom: "0px",
                 }}
                 level={3}
@@ -207,12 +205,12 @@ const WorkExperience: React.FC = () => {
                 style={{
                   fontSize: "18px",
                   fontFamily: "Helvetica",
-                  textAlign: "right",
+                  textAlign: "left",
                   marginBottom: "0px",
                 }}
                 level={3}
               >
-                Feb 2021 - Present
+                Feb 2021 - Jul 2021
               </Title>
             }
           >
@@ -231,8 +229,7 @@ const WorkExperience: React.FC = () => {
                 }}
                 level={3}
               >
-                Feb 2021 - Present: Full-stack Software Engineer Intern at
-                Workclass.co
+                Full-stack Software Engineer Intern at Workclass.co
               </Title>
               <div
                 style={{
@@ -246,7 +243,7 @@ const WorkExperience: React.FC = () => {
 
               <Text style={{ textAlign: "left" }}>
                 <ul>
-                  <Row>
+                  <Row style={{ marginBottom: 10 }}>
                     <Tag color="blue">React</Tag>
                     <Tag color="purple">Gatsby.JS</Tag>
                     <Tag color="red">GraphQL</Tag>
@@ -269,6 +266,66 @@ const WorkExperience: React.FC = () => {
                   <li>
                     Built company’s Learning Hub which is utilised by over
                     10,000 users.
+                  </li>
+                </ul>
+              </Text>
+            </Card>
+          </Timeline.Item>
+
+          <Timeline.Item
+            label={
+              <Title
+                style={{
+                  fontSize: "18px",
+                  fontFamily: "Helvetica",
+                  textAlign: "right",
+                  marginBottom: "0px",
+                }}
+                level={3}
+              >
+                Aug 2021 - Present
+              </Title>
+            }
+          >
+            <Card
+              hoverable
+              style={{
+                marginRight: "20px",
+              }}
+            >
+              <Title
+                style={{
+                  fontSize: "18px",
+                  fontFamily: "Helvetica",
+                  textAlign: "center",
+                  marginBottom: "0px",
+                }}
+                level={3}
+              >
+                Front-End Developer Intern at Shopee
+              </Title>
+              <div
+                style={{
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                }}
+              >
+                <img width="50%" src={ShopeeLogo}></img>
+              </div>
+
+              <Text style={{ textAlign: "left" }}>
+                <ul>
+                  <Row style={{ marginBottom: 10 }}>
+                    <Tag color="blue">React</Tag>
+                    <Tag color="green">SCSS</Tag>
+                    <Tag color="orange">Firebase</Tag>
+                  </Row>
+
+                  <li>Design Team</li>
+                  <li>
+                    Working on task/ticket management web application,similar to
+                    Jira, for designers
                   </li>
                 </ul>
               </Text>

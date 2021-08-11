@@ -65,7 +65,7 @@ const projects = [
           },
           {
             title: "Website",
-            link: "https://soaza.github.io/Pawfriends/",
+            link: "https://nuspawfriends.com/",
           },
         ],
       },
@@ -269,7 +269,7 @@ const Project: React.FC = () => {
                             {project.images?.map((image: any) => {
                               return (
                                 <>
-                                  <Image height="400px" src={image}></Image>
+                                  <Image src={image}></Image>
                                   <Card bordered={false}></Card>
                                 </>
                               );

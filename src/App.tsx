@@ -18,7 +18,6 @@ const { useState } = React;
 const App: FC = () => {
   const bp = Grid.useBreakpoint();
   const isWeb = bp.lg;
-  console.log(isWeb);
   const [showTypewriter, setShowTypewriter] = useState(true);
   const [textColor, setTextColor] = useState("black");
   return (
