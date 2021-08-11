@@ -28,7 +28,8 @@ const frontendTools = [
   { text: "CSS", icon: "devicon-css3-plain colored", percent: 60 },
   { text: "Bootstrap", icon: "devicon-bootstrap-plain colored", percent: 50 },
   { text: "GatsbyJS", icon: "devicon-gatsby-plain colored", percent: 50 },
-  { text: "Django", icon: "devicon-django-plain colored", percent: 50 },
+  { text: "NextJS", icon: "devicon-nextjs-plain colored", percent: 50 },
+  // { text: "Django", icon: "devicon-django-plain colored", percent: 50 },
 ];
 
 const backendTools = [

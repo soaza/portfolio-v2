@@ -244,7 +244,12 @@ const Project: React.FC = () => {
         My Projects
       </Title>
 
-      <Tabs style={{ marginLeft: "20px" }} centered size="large" animated>
+      <Tabs
+        style={{ marginLeft: "20px", marginBottom: 30 }}
+        centered
+        size="large"
+        animated
+      >
         {projects.map((project, i) => {
           return (
             <TabPane tab={project.type} key={i}>
@@ -252,7 +257,10 @@ const Project: React.FC = () => {
                 {project.data.map((project: any) => {
                   return (
                     <Col style={{ marginTop: "20px" }} span={22} lg={11}>
-                      <Card hoverable style={{ minHeight: "800px" }}>
+                      <Card
+                        hoverable
+                        // style={{ minHeight: isWeb ? "800px" : "auto" }}
+                      >
                         <Title
                           style={{
                             fontSize: "30px",
@@ -281,6 +289,7 @@ const Project: React.FC = () => {
                           {project.techstack?.map((tech: any) => {
                             return (
                               <Tag
+                                style={{ marginBottom: 10 }}
                                 color={
                                   badgeMapping.find(
                                     (mapping) => mapping.techstack == tech
@@ -293,14 +302,17 @@ const Project: React.FC = () => {
                           })}
                         </Row>
 
-                        <Text style={{ fontSize: 16 }}>{project.text}</Text>
+                        <Text style={{ fontSize: 13 }}>{project.text}</Text>
 
                         <Row style={{ marginTop: "20px" }}>
                           {project.links?.map((link: any) => {
                             return (
                               <Button
                                 shape="round"
-                                style={{ marginRight: "10px" }}
+                                style={{
+                                  marginRight: "10px",
+                                  marginBottom: 10,
+                                }}
                                 type="primary"
                                 onClick={() => window.open(link.link, "_blank")}
                               >

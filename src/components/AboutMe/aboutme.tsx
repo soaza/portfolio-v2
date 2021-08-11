@@ -28,7 +28,9 @@ const AboutMe: React.FC = () => {
             textAlign: "center",
           }}
         >
-          <strong>Web Developer</strong>
+          <strong>
+            Developer-<i>slash</i>-innovator
+          </strong>
         </Title>
         <Row justify="center">
           <img
@@ -47,7 +49,7 @@ const AboutMe: React.FC = () => {
                 textAlign: "center",
               }}
             >
-              I am Kim Guan, a Year 2 Computer Science student at the National
+              I am Kim Guan, a Year 3 Computer Science student at the National
               University of Singapore,
               <br />
               an aspiring full-stack developer and also a self-proclaimed Disney
