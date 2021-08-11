@@ -2,4 +2,4 @@
 
 Second rendition of my portfolio.
 
-Deployed at: https://kimguanified.netlify.app/
+Deployed at: http://kimguanified.me
