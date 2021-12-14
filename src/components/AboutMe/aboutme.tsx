@@ -30,7 +30,7 @@ const MenuOptions = [
 
 const s = {
   fontFamily: "Roboto Slab",
-  fontSize: "24px",
+  fontSize: "28px",
 };
 
 const AboutMe: React.FC = () => {
@@ -41,79 +41,82 @@ const AboutMe: React.FC = () => {
     <>
       <div
         style={{
+          backgroundColor: isWeb ? "#dcfcd4" : "white",
           height: "100%",
-          width: isWeb ? 500 : "80vw",
+          width: isWeb ? "33.3%" : "80vw",
           position: isWeb ? "fixed" : "unset",
-          marginLeft: 30,
+          padding: 10,
         }}
         id="aboutme"
       >
-        <Title
-          id="aboutme"
-          style={{
-            fontSize: "80px",
-            fontFamily: "Roboto Slab",
-            marginBottom: "0px",
-          }}
-        >
-          Kim Guan
-        </Title>
-        <Title
-          level={4}
-          style={{
-            marginTop: "0px",
-            fontSize: "30px",
-            fontFamily: "Roboto Slab",
-          }}
-        >
-          <strong>Developer</strong>
-        </Title>
-
-        <p>
-          <Text
+        <div style={{ marginLeft: 20 }}>
+          <Title
+            id="aboutme"
             style={{
-              fontSize: "20px",
+              fontSize: "80px",
               fontFamily: "Roboto Slab",
-              color: "gray",
+              marginBottom: "0px",
             }}
           >
-            I am Kim Guan, a Year 3 Computer Science student at the National
-            University of Singapore,
-            <br />
-            an aspiring full-stack developer and also a self-proclaimed Disney
-            movie junkie.
-          </Text>
-        </p>
-
-        <Row>
-          <img
-            style={{ marginBottom: "24px" }}
-            height="200em"
-            object-fit="contain"
-            src={ProfilePic}
-          ></img>
-        </Row>
-
-        {isWeb && (
-          <ul
+            Kim Guan
+          </Title>
+          <Title
+            level={4}
             style={{
-              listStyle: "none",
-              padding: 0,
+              marginTop: "0px",
+              fontSize: "30px",
+              fontFamily: "Roboto Slab",
             }}
           >
-            {MenuOptions.map((option, i) => {
-              return (
-                <li>
-                  <Link to={option.link} spy={true} smooth={true}>
-                    <Text key={i} style={{ ...s }}>
-                      {option.text}
-                    </Text>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        )}
+            <strong>Developer</strong>
+          </Title>
+
+          <p>
+            <Text
+              style={{
+                fontSize: "18px",
+                fontFamily: "Roboto Slab",
+                color: "gray",
+              }}
+            >
+              I am Kim Guan, a Year 3 Computer Science student at the National
+              University of Singapore,
+              <br />
+              an aspiring full-stack developer and also a self-proclaimed Disney
+              movie junkie.
+            </Text>
+          </p>
+
+          <Row>
+            <img
+              style={{ marginBottom: "24px" }}
+              height="200em"
+              object-fit="contain"
+              src={ProfilePic}
+            ></img>
+          </Row>
+
+          {isWeb && (
+            <ul
+              style={{
+                listStyle: "none",
+                padding: 0,
+              }}
+            >
+              {MenuOptions.map((option, i) => {
+                return (
+                  <li>
+                    <Link to={option.link} spy={true} smooth={true}>
+                      <Text key={i} style={{ ...s }}>
+                        {option.text}
+                      </Text>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
       </div>
     </>
   );

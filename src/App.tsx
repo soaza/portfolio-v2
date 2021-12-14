@@ -64,10 +64,10 @@ const App: FC = () => {
               <Divider />
 
               {isWeb ? <WorkExperience /> : <WorkExperienceMobile />}
+
+              <Contact />
             </Col>
           </Row>
-
-          <Contact />
         </>
       )}
       {isWeb && showTypewriter && (
