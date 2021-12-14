@@ -256,7 +256,7 @@ const Project: React.FC = () => {
               <Row justify="space-around">
                 {project.data.map((project: any) => {
                   return (
-                    <Col style={{ marginTop: "20px" }} span={22} lg={11}>
+                    <Col style={{ marginTop: "20px" }} span={22}>
                       <Card
                         hoverable
                         // style={{ minHeight: isWeb ? "800px" : "auto" }}

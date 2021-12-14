@@ -29,14 +29,13 @@ const App: FC = () => {
 
       {(!showTypewriter || !isWeb) && (
         <>
-          {isWeb && <Navbar />}
           <Affix
             style={{ zIndex: 1, position: "fixed", bottom: 10, right: 10 }}
           >
             <Button
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1Fa4y4XWmEpiShGvbKRrILas794_IqBfp/view"
+                  "https://drive.google.com/file/d/1HQYe2O6DMTIdooZORLkN1XC97Ft006b_/view?usp=sharing"
                 )
               }
               style={{ borderRadius: 10 }}
@@ -45,23 +44,28 @@ const App: FC = () => {
               My Resume
             </Button>
           </Affix>
-          <AboutMe />
-          <Divider />
 
-          <TechStack />
-          <Divider />
+          <Row justify="space-between">
+            <Col span={24} lg={8}>
+              <AboutMe />
+            </Col>
 
-          {isWeb && (
-            <FadeIn>
-              <Project />
-            </FadeIn>
-          )}
+            <Col span={24} lg={16}>
+              <TechStack />
+              <Divider />
 
-          {!isWeb && <Project />}
-          <Divider />
+              {isWeb && (
+                <FadeIn>
+                  <Project />
+                </FadeIn>
+              )}
 
-          {isWeb ? <WorkExperience /> : <WorkExperienceMobile />}
-          <Divider />
+              {!isWeb && <Project />}
+              <Divider />
+
+              {isWeb ? <WorkExperience /> : <WorkExperienceMobile />}
+            </Col>
+          </Row>
 
           <Contact />
         </>
