@@ -33,6 +33,52 @@ const projects = [
     type: "Web Development",
     data: [
       {
+        title: "Moave",
+        techstack: [
+          "React",
+          "Typescript",
+          "ExpressJS",
+          "NodeJS",
+          "PostgresSQL",
+        ],
+        images: [
+          process.env.PUBLIC_URL + "/projectImages/Moave-1.png",
+          process.env.PUBLIC_URL + "/projectImages/Moave-2.png",
+          process.env.PUBLIC_URL + "/projectImages/Moave-3.png",
+          process.env.PUBLIC_URL + "/projectImages/Moave-4.png",
+          process.env.PUBLIC_URL + "/projectImages/Moave-5.png",
+          process.env.PUBLIC_URL + "/projectImages/Moave-6.png",
+        ],
+        text: (
+          <Text>
+            A movie-centred social media platform for like-minded individuals to
+            connect over their taste of movies Main features include:
+            <ul>
+              <li>
+                Account Management System with basic user login authentication
+              </li>
+              <li>
+                Search up movie details and add movies to their profile based on
+                the status(currently watching,plan to watch,completed)
+              </li>
+              <li>Forum feature for users to discuss movies</li>
+              <li>Movie recommender to search related movies</li>
+              <li>Following/follower feature to connect users</li>
+            </ul>
+          </Text>
+        ),
+        links: [
+          {
+            title: "Source Code",
+            link: "https://github.com/soaza/pawfriends",
+          },
+          {
+            title: "Website",
+            link: "https://nuspawfriends.com/",
+          },
+        ],
+      },
+      {
         title: "NUS Pawfriends Official Website",
         techstack: [
           "React",
@@ -302,7 +348,11 @@ const Project: React.FC = () => {
                           })}
                         </Row>
 
-                        <Text style={{ fontSize: 13 }}>{project.text}</Text>
+                        <Text
+                          style={{ fontFamily: "Roboto Slab", fontSize: 16 }}
+                        >
+                          {project.text}
+                        </Text>
 
                         <Row style={{ marginTop: "20px" }}>
                           {project.links?.map((link: any) => {
